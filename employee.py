@@ -2,11 +2,12 @@ import json
 from json import JSONEncoder
 
 class Employee:
-  def __init__(self, name, u_time, s_time, email):
+  def __init__(self, name, u_time, s_time, email, avatar):
     self.name = name
     self.u_time = u_time
     self.s_time = s_time
     self.email = email
+    self.avatar = avatar
     
   def toJson(self):
       return json.dumps(self, default=lambda o: o.__dict__)

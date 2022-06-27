@@ -55,34 +55,36 @@ def load_all_applications():
     return "all application"
 
 
-@app.route('/load_most_unschedule_list', methods=['GET'])
+@app.route('/load_unscheduled_list', methods=['GET'])
 def load_most_unschedule_list():
     employees = []
     employees.append(json.loads(EmployeeEncoder().encode(
-        Employee("pham", 5, 3, "pham@rakute.com"))))
+        Employee("pham", 5, 3, "pham@rakute.com", "https://s3.o7planning.com/images/boy-128.png"))))
     employees.append(json.loads(EmployeeEncoder().encode(
-        Employee("minh", 3, 4, "minh@rakute.com"))))
+        Employee("minh", 3, 4, "minh@rakute.com", "https://s3.o7planning.com/images/boy-128.png"))))
     employees.append(json.loads(EmployeeEncoder().encode(
-        Employee("hoang", 2, 1, "hoang@rakuten.com"))))
+        Employee("hoang", 2, 1, "hoang@rakuten.com", "https://s3.o7planning.com/images/boy-128.png"))))
     employees.append(json.loads(EmployeeEncoder().encode(
-        Employee("demo", 1, 1, "hoang@rakuten.com"))))
+        Employee("demo", 1, 1, "hoang@rakuten.com", "https://s3.o7planning.com/images/boy-128.png"))))
     employees.append(json.loads(EmployeeEncoder().encode(
-        Employee("demo", 1, 1, "hoang@rakuten.com"))))
+        Employee("demo", 1, 1, "hoang@rakuten.com", "https://s3.o7planning.com/images/boy-128.png"))))
     employees.append(json.loads(EmployeeEncoder().encode(
-        Employee("demo", 1, 1, "hoang@rakuten.com"))))
+        Employee("demo", 1, 1, "hoang@rakuten.com", "https://s3.o7planning.com/images/boy-128.png"))))
     employees.append(json.loads(EmployeeEncoder().encode(
-        Employee("demo", 1, 1, "hoang@rakuten.com"))))
+        Employee("demo", 1, 1, "hoang@rakuten.com", "https://s3.o7planning.com/images/boy-128.png"))))
     employees.append(json.loads(EmployeeEncoder().encode(
-        Employee("demo", 1, 1, "hoang@rakuten.com"))))
+        Employee("demo", 1, 1, "hoang@rakuten.com", "https://s3.o7planning.com/images/boy-128.png"))))
     employees.append(json.loads(EmployeeEncoder().encode(
-        Employee("demo", 1, 1, "hoang@rakuten.com"))))
+        Employee("demo", 1, 1, "hoang@rakuten.com", "https://s3.o7planning.com/images/boy-128.png"))))
     employees.append(json.loads(EmployeeEncoder().encode(
-        Employee("demo", 1, 1, "hoang@rakuten.com"))))
+        Employee("demo", 1, 1, "hoang@rakuten.com", "https://s3.o7planning.com/images/boy-128.png"))))
     employees.append(json.loads(EmployeeEncoder().encode(
-        Employee("demo", 1, 1, "hoang@rakuten.com"))))
+        Employee("demo", 1, 1, "hoang@rakuten.com", "https://s3.o7planning.com/images/boy-128.png"))))
     return jsonify(employees=employees)
 
 # A welcome message to test our server
+
+
 @app.route('/')
 def index():
     return "<h1>Welcome to our server !!</h1>"
